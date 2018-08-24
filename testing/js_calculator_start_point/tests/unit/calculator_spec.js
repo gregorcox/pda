@@ -41,17 +41,22 @@ describe('calculator', function () {
     assert.equal(52, calculator.runningTotal);
   })
 
-  xit('should chain multiple operations together', function (){
-    calculator.previousTotal = 10;
+  it('should chain multiple operations together', function (){
+    calculator.numberClick(10);
     calculator.operatorClick('+');
     calculator.numberClick(5);
+    calculator.operatorClick('=')
     assert.equal(15, calculator.runningTotal);
   })
 
   it('should be able to clear the running total without affecting the calculation', function (){
-    calculator.runningTotal = 5;
+    calculator.numberClick(5);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
     calculator.clearClick();
-    assert.equal(0, calculator.runningTotal);
+    calculator.numberClick(3);
+    calculator.operatorClick('=');
+    assert.equal(8, calculator.runningTotal);
   })
 
 });
