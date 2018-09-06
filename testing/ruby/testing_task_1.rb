@@ -17,6 +17,7 @@ class CardGame
 
  # method should be names check_for_ave as convention
  # should be == rather than =
+ # should use .self before function name
 
 
   dif highest_card(card1 card2)
@@ -34,6 +35,7 @@ end
 # card does not have an attribute of .name
 # should have 'return card2' instead of just card2
 # extra unneccesary end
+# should use .self before function name
 
 def self.cards_total(cards)
   total
@@ -45,5 +47,5 @@ end
 
 # total should be initialized, should be total = 0
 # the string return should be after the end of the for loop
-#
+# should use .self before function name
 # class has no 'end'
